@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:infra_swift/lets_start_screen.dart';
 import 'package:infra_swift/login_page.dart';
 import 'package:infra_swift/login_type_page.dart';
+import 'package:infra_swift/register_page.dart';
 
 class InfraSwift extends StatefulWidget {
   const InfraSwift({super.key});
@@ -31,6 +32,12 @@ class _InfraSwiftState extends State<InfraSwift> {
     });
   }
 
+  void registerTap() {
+    setState(() {
+      activeScreen = 'registerPage';
+    });
+  }
+
   @override
   Widget build(context) {
     Widget screenWidget = LetsStartScreen(
@@ -39,13 +46,20 @@ class _InfraSwiftState extends State<InfraSwift> {
     ); // calling new page
 
     if (activeScreen == 'loginTypePage') {
-      screenWidget = LoginTypePage(loginTap: loginTap);
+      screenWidget = LoginTypePage(
+        loginTap: loginTap,
+        registerTap: registerTap,
+      );
     }
 
     if (activeScreen == 'loginPage') {
       screenWidget = LoginPage(
         backToLoginType: backToLoginType,
       );
+    }
+
+    if (activeScreen == 'registerPage') {
+      screenWidget = RegisterPage(backToLoginType: backToLoginType);
     }
 
     return MaterialApp(
