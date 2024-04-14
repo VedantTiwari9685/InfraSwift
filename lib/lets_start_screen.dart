@@ -12,18 +12,15 @@ class LetsStartScreen extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const SizedBox(
-            height: 20,
-          ),
           Opacity(
             opacity: 1.0,
             child: Image.asset(
-              'assets/images/House.jpg',
-              width: 270,
+              'assets/images/black.png',
+              width: 400,
             ),
           ),
           const SizedBox(
-            height: 60,
+            height: 20,
           ),
           const Text(
             'Welcome to',
