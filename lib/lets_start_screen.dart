@@ -13,13 +13,13 @@ class LetsStartScreen extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           const SizedBox(
-            height: 250,
+            height: 280,
           ),
           const Text(
             'Welcome to',
             style: TextStyle(
               fontSize: 24,
-              color: Colors.white,
+              color: Color.fromARGB(255, 59, 40, 10),
             ),
           ),
           const SizedBox(
@@ -28,24 +28,25 @@ class LetsStartScreen extends StatelessWidget {
           const Text(
             'InfraSwift',
             style: TextStyle(
+              fontStyle: FontStyle.italic,
               fontSize: 36,
               fontWeight: FontWeight.bold,
-              color: Colors.white,
+              color: Color.fromARGB(255, 59, 40, 10),
             ),
           ),
           const SizedBox(
-            height: 40,
+            height: 20,
           ),
           const Text(
             'Where Design meets Construction!',
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.w500,
-              color: Colors.white,
+              color: Color.fromARGB(255, 59, 40, 10),
             ),
           ),
           const SizedBox(
-            height: 120,
+            height: 60,
           ),
           ElevatedButton(
             onPressed: onTap,

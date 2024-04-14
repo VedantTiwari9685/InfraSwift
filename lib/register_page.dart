@@ -11,76 +11,130 @@ class RegisterPage extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           const SizedBox(
-            height: 30,
-          ),
-          const Text(
-            'Enter your First Name',
-            style: TextStyle(
-              fontSize: 25,
-              color: Colors.white,
-            ),
-          ),
-          const SizedBox(
             height: 20,
           ),
           const Text(
-            'Enter your Last Name',
+            'Register an Account',
             style: TextStyle(
-              fontSize: 25,
-              color: Colors.white,
-            ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          const Text(
-            'Enter your Phone Number',
-            style: TextStyle(
-              fontSize: 25,
-              color: Colors.white,
-            ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          const Text(
-            'Enter your Email',
-            style: TextStyle(
-              fontSize: 25,
-              color: Colors.white,
-            ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          const Text(
-            'Enter your City',
-            style: TextStyle(
-              fontSize: 25,
-              color: Colors.white,
+              fontSize: 26,
+              fontWeight: FontWeight.bold,
+              color: Color.fromARGB(255, 59, 40, 10),
             ),
           ),
           const SizedBox(
             height: 40,
           ),
-          OutlinedButton.icon(
-            onPressed: backToLoginType,
-            style: OutlinedButton.styleFrom(
-              padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-              backgroundColor: const Color.fromARGB(255, 59, 40, 10),
-              foregroundColor: const Color.fromARGB(255, 255, 255, 255),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30),
-              ),
+          const TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(
+                  borderSide:
+                      BorderSide(color: Color.fromARGB(255, 255, 255, 255))),
+              hintText: 'Enter your First Name',
+              constraints: BoxConstraints(maxHeight: 50, maxWidth: 290),
+              labelText: 'First Name',
+              labelStyle: TextStyle(fontSize: 17),
             ),
-            icon: const Icon(Icons.arrow_back),
-            label: const Text(
-              '',
-              style: TextStyle(
-                fontSize: 24,
-                color: Colors.white,
-              ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(
+                  borderSide:
+                      BorderSide(color: Color.fromARGB(255, 255, 255, 255))),
+              hintText: 'Enter your Last Name',
+              constraints: BoxConstraints(maxHeight: 50, maxWidth: 290),
+              labelText: 'Last Name',
+              labelStyle: TextStyle(fontSize: 17),
             ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(
+                  borderSide:
+                      BorderSide(color: Color.fromARGB(255, 255, 255, 255))),
+              hintText: 'Enter your Phone no.',
+              constraints: BoxConstraints(maxHeight: 50, maxWidth: 290),
+              labelText: 'Phone no.',
+              labelStyle: TextStyle(fontSize: 17),
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(
+                  borderSide:
+                      BorderSide(color: Color.fromARGB(255, 255, 255, 255))),
+              hintText: 'Enter your Email Address',
+              constraints: BoxConstraints(maxHeight: 50, maxWidth: 290),
+              labelText: 'Email',
+              labelStyle: TextStyle(fontSize: 17),
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(
+                  borderSide:
+                      BorderSide(color: Color.fromARGB(255, 255, 255, 255))),
+              hintText: 'Enter your City',
+              constraints: BoxConstraints(maxHeight: 50, maxWidth: 290),
+              labelText: 'City',
+              labelStyle: TextStyle(fontSize: 17),
+            ),
+          ),
+          const SizedBox(
+            height: 60,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                width: 130,
+                height: 35,
+                child: ElevatedButton(
+                  onPressed: backToLoginType,
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.zero,
+                    backgroundColor: const Color.fromARGB(255, 59, 40, 10),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                  ),
+                  child: const Text(
+                    'Back',
+                    style: TextStyle(fontSize: 16, color: Colors.white),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 20),
+              SizedBox(
+                width: 130,
+                height: 35,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.zero,
+                    backgroundColor: const Color.fromARGB(255, 59, 40, 10),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                  ),
+                  child: const Text(
+                    'Submit',
+                    style: TextStyle(fontSize: 16, color: Colors.white),
+                  ),
+                ),
+              ),
+            ],
           )
         ],
       ),

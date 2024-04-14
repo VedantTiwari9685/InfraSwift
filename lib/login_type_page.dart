@@ -13,18 +13,26 @@ class LoginTypePage extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           const SizedBox(
-            height: 80,
+            height: 40,
           ),
           const Text(
-            'To continue',
+            'How would you like',
             style: TextStyle(
-              fontSize: 30,
+              fontSize: 26,
               fontWeight: FontWeight.bold,
-              color: Colors.white,
+              color: Color.fromARGB(255, 59, 40, 10),
+            ),
+          ),
+          const Text(
+            'to continue?',
+            style: TextStyle(
+              fontSize: 26,
+              fontWeight: FontWeight.bold,
+              color: Color.fromARGB(255, 59, 40, 10),
             ),
           ),
           const SizedBox(
-            height: 60,
+            height: 40,
           ),
           ElevatedButton(
             onPressed: loginTap,
