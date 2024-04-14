@@ -13,7 +13,17 @@ class LetsStartScreen extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           const SizedBox(
-            height: 280,
+            height: 20,
+          ),
+          Opacity(
+            opacity: 1.0,
+            child: Image.asset(
+              'assets/images/House.jpg',
+              width: 270,
+            ),
+          ),
+          const SizedBox(
+            height: 60,
           ),
           const Text(
             'Welcome to',
@@ -46,7 +56,7 @@ class LetsStartScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 60,
+            height: 100,
           ),
           ElevatedButton(
             onPressed: onTap,
