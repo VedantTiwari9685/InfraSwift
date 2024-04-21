@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatelessWidget {
-  const RegisterPage({super.key, required this.backToLoginType});
+  const RegisterPage({
+    super.key,
+    required this.backToLoginType,
+    required this.registerSuccessTap,
+  });
+
   final void Function() backToLoginType;
+  final void Function() registerSuccessTap;
 
   @override
   Widget build(context) {
@@ -120,7 +126,7 @@ class RegisterPage extends StatelessWidget {
                 width: 130,
                 height: 35,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: registerSuccessTap,
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.zero,
                     backgroundColor: const Color.fromARGB(255, 59, 40, 10),

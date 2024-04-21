@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 
 class LoginTypePage extends StatelessWidget {
   const LoginTypePage(
-      {super.key, required this.loginTap, required this.registerTap});
+      {super.key,
+      required this.loginTap,
+      required this.registerTap,
+      required this.homeTap});
   final void Function() loginTap;
   final void Function() registerTap;
+  final void Function() homeTap;
 
   @override
   Widget build(context) {
@@ -75,7 +79,7 @@ class LoginTypePage extends StatelessWidget {
             height: 10,
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: homeTap,
             style: ElevatedButton.styleFrom(
               fixedSize: const Size(180, 40),
               padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),

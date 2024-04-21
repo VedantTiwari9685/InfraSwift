@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key, required this.backToLoginType});
+  const LoginPage(
+      {super.key, required this.backToLoginType, required this.homeTap});
   final void Function() backToLoginType;
+  final void Function() homeTap;
 
   @override
   Widget build(context) {
@@ -78,7 +80,7 @@ class LoginPage extends StatelessWidget {
                 width: 130,
                 height: 35,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: homeTap,
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.zero,
                     backgroundColor: const Color.fromARGB(255, 59, 40, 10),

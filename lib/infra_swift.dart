@@ -3,6 +3,8 @@ import 'package:infra_swift/lets_start_screen.dart';
 import 'package:infra_swift/login_page.dart';
 import 'package:infra_swift/login_type_page.dart';
 import 'package:infra_swift/register_page.dart';
+import 'package:infra_swift/register_success.dart';
+import 'package:infra_swift/swift_home_page.dart';
 
 class InfraSwift extends StatefulWidget {
   const InfraSwift({super.key});
@@ -38,6 +40,18 @@ class _InfraSwiftState extends State<InfraSwift> {
     });
   }
 
+  void homeTap() {
+    setState(() {
+      activeScreen = 'homePage';
+    });
+  }
+
+  void registerSuccessTap() {
+    setState(() {
+      activeScreen = 'registerSuccessPage';
+    });
+  }
+
   @override
   Widget build(context) {
     Widget screenWidget = LetsStartScreen(
@@ -49,17 +63,32 @@ class _InfraSwiftState extends State<InfraSwift> {
       screenWidget = LoginTypePage(
         loginTap: loginTap,
         registerTap: registerTap,
+        homeTap: homeTap,
       );
     }
 
     if (activeScreen == 'loginPage') {
       screenWidget = LoginPage(
         backToLoginType: backToLoginType,
+        homeTap: homeTap,
       );
     }
 
     if (activeScreen == 'registerPage') {
-      screenWidget = RegisterPage(backToLoginType: backToLoginType);
+      screenWidget = RegisterPage(
+        backToLoginType: backToLoginType,
+        registerSuccessTap: registerSuccessTap,
+      );
+    }
+
+    if (activeScreen == 'homePage') {
+      screenWidget = const HomePage();
+    }
+
+    if (activeScreen == 'registerSuccessPage') {
+      screenWidget = RegisterSuccessPage(
+        homeTap: homeTap,
+      );
     }
 
     return MaterialApp(
