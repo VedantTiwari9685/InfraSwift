@@ -5,11 +5,18 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return const Center(
+    return Center(
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(
+          Opacity(
+            opacity: 1.0,
+            child: Image.asset(
+              'assets/images/black.png',
+              width: 400,
+            ),
+          ),
+          const Text(
             "Home Page",
             style: TextStyle(
               color: Color.fromARGB(255, 59, 40, 10),
@@ -17,18 +24,26 @@ class HomePage extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(
-            height: 250,
+          const SizedBox(
+            height: 180,
           ),
-          Text(
-            "This page is still in progress",
+          const Text(
+            "This page is still",
             style: TextStyle(
               color: Colors.white,
               fontSize: 30,
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(
+          const Text(
+            "in progress",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(
             height: 80,
           )
         ],

@@ -16,8 +16,15 @@ class LoginTypePage extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
+          Opacity(
+            opacity: 1.0,
+            child: Image.asset(
+              'assets/images/black.png',
+              width: 400,
+            ),
+          ),
           const SizedBox(
-            height: 40,
+            height: 50,
           ),
           const Text(
             'How would you like',
@@ -36,7 +43,7 @@ class LoginTypePage extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 40,
+            height: 20,
           ),
           ElevatedButton(
             onPressed: loginTap,
